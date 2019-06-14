@@ -5,7 +5,7 @@ let settingData = {
     basePath: "G:/SoftwareOutSourcing/HSBC/问卷/project", //基础路径
     domainName: "http://questionnaire.hsbc.liphin.com", //域名设置
     isProd: false, //是否为生产环境
-    frontPort: 3301, //前端port
+    frontPort: 3302, //前端port
 };
 //其他配置
 settingData['projectPath'] = settingData['basePath'] + "/front/public";

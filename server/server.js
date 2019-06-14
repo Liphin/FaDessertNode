@@ -63,12 +63,15 @@ let credentials = {key: privateKey, cert: certificate};
 
 /**
  * 如果部署到生产环境则用https协议打开端口，否则直接使用http协议端口
+ * @Deprecated 已存在Nginx代理，在nginx中已经读取https的cert
  */
-if (global.env == 'prod') {
-    https.createServer(credentials, app).listen(serverData.port); //开启http设置s配置
-} else {
-    app.listen(serverData.port);
-}
+// if (global.env == 'prod') {
+//     https.createServer(credentials, app).listen(serverData.port); //开启http设置s配置
+// } else {
+//     app.listen(serverData.port);
+// }
+app.listen(serverData.port);
+
 console.log('Server proxy on port: ', serverData.port, ' , on environment: ', global.env);
 
 
