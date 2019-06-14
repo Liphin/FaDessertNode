@@ -20,16 +20,6 @@ overallModule.config(function ($routeProvider, $httpProvider, $sceDelegateProvid
                 }
             }
         })
-        .when('/design/:_id', {
-            templateUrl: 'src/design/tmpl/design.html',
-            controller: 'DesignCtrl',
-            controllerAs: 'design',
-            resolve: {
-                check: function (OverallSer) {
-                    return OverallSer.processLogonStatus(20, '/login');
-                }
-            }
-        })
         .otherwise({redirectTo: '/login'});
 
     //部署拦截器，每次http请求，会经过拦截器方法后再往下传

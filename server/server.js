@@ -56,20 +56,17 @@ app.use("/", express.static(serverData.projectPath));
 
 /**
  * 开启http和https服务
- */
-let privateKey = fs.readFileSync(serverData.targetSetting.certConfig.key);
-let certificate = fs.readFileSync(serverData.targetSetting.certConfig.cert);
-let credentials = {key: privateKey, cert: certificate};
-
-/**
- * 如果部署到生产环境则用https协议打开端口，否则直接使用http协议端口
  * @Deprecated 已存在Nginx代理，在nginx中已经读取https的cert
  */
 // if (global.env == 'prod') {
+//     let privateKey = fs.readFileSync(serverData.targetSetting.certConfig.key);
+//     let certificate = fs.readFileSync(serverData.targetSetting.certConfig.cert);
+//     let credentials = {key: privateKey, cert: certificate};
 //     https.createServer(credentials, app).listen(serverData.port); //开启http设置s配置
 // } else {
 //     app.listen(serverData.port);
 // }
+
 app.listen(serverData.port);
 
 console.log('Server proxy on port: ', serverData.port, ' , on environment: ', global.env);

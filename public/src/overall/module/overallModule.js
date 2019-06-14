@@ -7,6 +7,5 @@ let overallModule = angular.module('Angular',
         'ngCookies',
         'ngAnimate',
         'Angular.login',
-        'Angular.manage',
-        'Angular.design'
+        'Angular.manage'
     ]);
