@@ -1,8 +1,10 @@
 /**
  * Created by Administrator on 2019/5/27.
  */
-"use strict"
+"use strict";
 loginModule.controller('LoginCtrl', function ($scope, LoginDataSer, LoginSer) {
+    var a = 123;
+    let b = 456;
     let login = this;
     login.pageConfig = LoginDataSer.pageConfig;
     login.loginInfo = LoginDataSer.loginInfo;
