@@ -1,7 +1,6 @@
 /**
  * Created by Administrator on 2019/5/27.
  */
-"use strict";
 loginModule.controller('LoginCtrl', function ($scope, LoginDataSer, LoginSer) {
     var a = 123;
     let b = 456;
